@@ -3,12 +3,17 @@
 
 'use strict';
 
-import $ from 'jquery';
-import Link from '../_modules/link/link';
+var $ = require('jquery');
+var Link = require('../_modules/link/link');
 
-$(() => {
+$(function() {
   new Link(); // Activate Link modules logic
   console.log('Welcome to Yeogurt!');
 });
 
 var chart = require('./_charts.js');
+var L = require("leaflet");
+var MiniMap = require('leaflet-minimap');
+var map = require("./_map.js");
+
+L.Icon.Default.imagePath = 'https://unpkg.com/leaflet@1.3.1/dist/images/';
